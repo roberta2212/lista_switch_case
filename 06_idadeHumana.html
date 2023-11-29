@@ -8,11 +8,26 @@
     // - cães grandes: fator 7.
 
     // ENTRADA
+    function calcularIdadeHumana(cidadeCao, idadeCao) {
+    let fator;
 
-    
-    // PROCESSAMENTO
+    switch (cidadeCao) {
+        case "pequeno":
+            fator = 5;
+            break;
+        case "medio":
+            fator = 6;
+            break;
+        case "grande":
+            fator = 7;
+            break;
+        default:
+            console.log("Porte de cão não reconhecido");
+            return;
+    }
 
-    
-    // SAÍDA
-
+    const idadeHumana = idadeCao * fator;
+    console.log("A idade humana do cão é: " + idadeHumana);
+}:
+calcularIdadeHumana("pequeno", 3); 
     </script>

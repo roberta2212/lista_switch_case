@@ -4,10 +4,24 @@
 
     // ENTRADA
 
+function verificarVogal(caractere) {
     
-    // PROCESSAMENTO
+    caractere = caractere.toLowerCase();
 
     
-    // SAÍDA
+    switch (caractere) {
+        case 'a':
+        case 'e':
+        case 'i':
+        case 'o':
+        case 'u':
+            console.log("É uma vogal.");
+            break;
+        default:
+            console.log("Não é uma vogal.");
+    }
+}
+const caractere = prompt("Digite um caractere: ");
+verificarVogal(caractere);
 
 </script>

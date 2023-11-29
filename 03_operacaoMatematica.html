@@ -9,6 +9,42 @@
 
     //ENTRADA
 
+function verificarParOuImpar(numero) {
+    return numero % 2 === 0 ? "par" : "ímpar";
+}
+function verificarPositivoOuNegativo(numero) {
+    return numero >= 0 ? "positivo" : "negativo";
+}
+function verificarInteiroOuDecimal(numero) {
+    return Number.isInteger(numero) ? "inteiro" : "decimal";
+}
+function calcularOperacao() {
+    let numero1 = parseFloat(prompt("Digite o primeiro número:"));
+    let numero2 = parseFloat(prompt("Digite o segundo número:"));
+    let operacao = prompt("Escolha a operação desejada (+, -, *, /):");
+}
+    switch (operacao) {
+        case "+":
+            var resultado = numero1 + numero2;
+            break;
+        case "-":
+            var resultado = numero1 - numero2;
+            break;
+        case "*":
+            var resultado = numero1 * numero2;
+            break;
+        case "/":
+            var resultado = numero1 / numero2;
+            break;
+        default:
+            console.log("Operação inválida");
+            return;
+    }
+
+    // Exibição do resultado e informações sobre o número
+    console.log("Resultado: " + resultado);
+    console.log("O número é " + resultado) 
+
 
     //PROCESSAMENTO
 

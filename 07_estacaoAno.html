@@ -6,11 +6,56 @@
     */
 
     //ENTRADA
-
-    
-    //PROCESSAMENTO
-
-
-    //SAÍDA
-
+function obterEstacao(hemisferio, mes) {
+    switch (hemisferio.toLowerCase()) {
+        case 'norte':
+            switch (mes) {
+                case 12:
+                case 1:
+                case 2:
+                    return 'Inverno';
+                case 3:
+                case 4:
+                case 5:
+                    return 'Primavera';
+                case 6:
+                case 7:
+                case 8:
+                    return 'Verão';
+                case 9:
+                case 10:
+                case 11:
+                    return 'Outono';
+                default:
+                    return 'Mês inválido';
+            }
+        case 'sul':
+            switch (mes) {
+                case 12:
+                case 1:
+                case 2:
+                    return 'Verão';
+                case 3:
+                case 4:
+                case 5:
+                    return 'Outono';
+                case 6:
+                case 7:
+                case 8:
+                    return 'Inverno';
+                case 9:
+                case 10:
+                case 11:
+                    return 'Primavera';
+                default:
+                    return 'Mês inválido';
+            }
+        default:
+            return 'Hemisfério inválido';
+    }
+}
+let hemisferio = prompt('Em qual hemisfério você está (norte/sul)?');
+let mes = parseInt(prompt('Digite o número do mês (1 a 12):'));
+let estacao = obterEstacao(hemisferio, mes);
+console.log('Você está na estação:', estacao);
 </script>

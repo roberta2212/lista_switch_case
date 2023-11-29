@@ -11,11 +11,42 @@
     */
 
     //ENTRADA
+function fazerPergunta(pergunta) {
+    const resposta = window.confirm(pergunta);
+    return resposta;
+}
+function emitirClassificacao(respostas) {
+    const positivas = respostas.filter(resposta => resposta).length;
 
-    
-    //PROCESSAMENTO
+    switch (positivas) {
+        case 2:
+            console.log("Suspeita");
+            break;
+        case 3:
+        case 4:
+            console.log("Cúmplice");
+            break;
+        case 5:
+            console.log("Assassino");
+            break;
+        default:
+            console.log("Inocente");
+            break;
+    }
+}
+const perguntas = [
+    "Telefonou para a vítima?",
+    "Esteve no local do crime?",
+    "Mora perto da vítima?",
+    "Devia para a vítima?",
+    "Já trabalhou com a vítima?"
+];
+const respostas = [];
+for (const pergunta of perguntas) {
+    const resposta = fazerPergunta(pergunta);
+    respostas.push(resposta);
+}
+emitirClassificacao(respostas);
 
-
-    //SAÍDA
 
 </script>
